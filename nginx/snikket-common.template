@@ -1,22 +1,27 @@
 root /var/www/html;
 
 location / {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files $uri /static/$uri @portal;
 }
 
 location /admin_api {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files none @prosody;
 }
 
 location /invites_api {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files none @prosody;
 }
 
 location /invites_bootstrap {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files none @prosody;
 }
 
 location /share {
+	include /etc/nginx/snippets/whitelist.conf;
 	alias /usr/share/javascript;
 }
 
@@ -28,10 +33,12 @@ location /upload {
 }
 
 location /http-bind {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files none @prosodyws;
 }
 
 location /xmpp-websocket {
+	include /etc/nginx/snippets/whitelist.conf;
 	try_files none @prosodyws;
 }
 

@@ -21,6 +21,7 @@ ENV LANG=C.UTF-8
 
 ADD entrypoint.sh /entrypoint.sh
 ADD render-template.sh /usr/local/bin/render-template.sh
+ADD nginx/whitelist.conf /etc/nginx/snippets/whitelist.conf
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
 ADD nginx/snikket-common.template /etc/nginx/templates/snikket-common
 ADD nginx/startup.template /etc/nginx/templates/startup
