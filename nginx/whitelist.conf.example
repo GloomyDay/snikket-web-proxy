@@ -1,0 +1,5 @@
+# Example: allow specific IPs/subnets, deny everyone else
+allow 203.0.113.50;
+allow 192.168.0.0/16;
+allow 10.0.0.0/8;
+deny all;
